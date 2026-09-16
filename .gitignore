@@ -1,0 +1,20 @@
+# Local participant/dependence configuration
+participant_matching_config.json
+mixed_model_design.csv
+exclusions.json
+local_config/
+
+# Restricted data and generated outputs
+data/
+results/
+cache/
+**/cache/
+**/resampling_draws/
+
+# Python/Jupyter artifacts
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
