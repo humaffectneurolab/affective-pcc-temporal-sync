@@ -1,0 +1,12 @@
+numpy
+pandas
+scipy
+statsmodels
+scikit-learn
+matplotlib
+nltools
+holoviews
+bokeh
+openpyxl
+jupyter
+ipykernel
