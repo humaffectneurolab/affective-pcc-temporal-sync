@@ -1,7 +1,5 @@
 # Public analysis code
 
-This repository contains the analysis code used for the manuscript. The public release intentionally contains **no final participant counts, participant IDs, exclusion lists, participant-level membership tables, or study-specific participant-overlap information**. Those items remain local and are supplied only at runtime through local configuration files.
-
 The repository contains seven analysis files:
 
 ```text
@@ -57,12 +55,6 @@ A generic example is:
   "study2": {
     "mode": "matched_modalities",
     "common_ids": ["participant_001", "participant_002"]
-  },
-  "isfc": {
-    "dataset_ids": {
-      "dataset_A": ["participant_001", "participant_002", "participant_003"],
-      "dataset_B": ["participant_004", "participant_005", "participant_006"]
-    }
   }
 }
 ```
@@ -130,8 +122,6 @@ Interpretation:
 The same anonymous ID should be reused whenever the same random-effect unit recurs. The public code validates that every Stage-1 dyad is covered by the local design table but does not distribute the values in that table.
 
 ## Expected data structures
-
-Only the structural requirements are documented here. Study-specific sample composition is intentionally omitted.
 
 ### Sliding-window ISC / group-median analysis
 
