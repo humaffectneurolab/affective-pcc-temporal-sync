@@ -75,8 +75,6 @@ with, for example:
 }
 ```
 
-No exclusion IDs should be written into the public source code.
-
 ## Stage-2 mixed-model design
 
 The primary sliding-window analysis uses a two-stage mixed-effects model. The public repository does not contain the study-specific information needed to define the following three model components:
@@ -132,8 +130,6 @@ A typical local input organization contains:
 - **window-level covariates:** one row per analysis window, with the audiovisual nuisance variables and time terms required by the analysis;
 - **atlas metadata:** ROI metadata used to define the network/region groupings.
 
-The scripts use `VISC_DATA_DIR` and `VISC_RESULTS_DIR` as the main path overrides. Additional dataset-specific path environment variables can be used where defined in the code.
-
 ### IS-RSA
 
 Before running `isrsa_analysis_cells.ipynb`, load the required local objects into the notebook namespace. Structurally:
@@ -142,8 +138,6 @@ Before running `isrsa_analysis_cells.ipynb`, load the required local objects int
 - participant-label vectors: one label per neural-array participant;
 - behavioral similarity matrices: square `participant × participant` matrices with labels that can be aligned to the neural participants;
 - atlas table: ROI metadata containing the columns used by the regional analysis.
-
-The public notebook does not contain participant labels or a fixed sample size.
 
 ### Whole-time-series ISFC
 
@@ -162,7 +156,7 @@ CSV, TSV, XLSX, and NPY inputs are supported. If tabular files include an ID col
 
 ## Suggested local layout
 
-The local configuration files and data can live outside the repository entirely. One possible local arrangement is:
+One possible local arrangement is:
 
 ```text
 project/
